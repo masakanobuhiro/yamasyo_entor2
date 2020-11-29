@@ -1,0 +1,279 @@
+body {
+  width: 100%;
+  background: #FFFFFF;
+  font-family: Noto Sans CJK JP;
+  font-style: normal;
+  color: #18191F;
+  font-feature-settings: 'liga' off; /* 要確認 */
+}
+.container {
+  /* 質問 今回の場合container用意するなら横幅何にするか */
+  /* padding: 80px 240px 0 240px; */
+    width: 1300px;
+    margin: 0 auto;
+    padding: 80px 0 96px 0;
+}
+.container__title {
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 140%;
+  /* margin-top: 80px; */
+  /* 質問 h2ってインライン要素なのに縦のmargin指定できてる・・ */
+  text-align: center;
+}
+
+
+.header {
+  height: 76px;
+  /* width: 100%; */
+}
+.header__logo-img {
+  padding: 21px 0 20px 127px;
+  /* ここはpaddingでもmarginでも良いのかな？ */
+  float: left;
+}
+.header__nav {
+  float: right;
+  margin: 26px 135px 28px
+  /* 質問 margin 縦はここで良い気がするけど、135pxはここでOK？ */
+}
+.header__ul {
+  float: right;
+  list-style-type: none;
+  overflow: hidden; /* 要確認 */
+}
+.header__li {
+  float: left;
+  margin-right: 40px; 
+  /* 質問 最後のliにもmargin-right ついちゃうけどOK? */
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.04em; /* 要確認 */
+}
+/* ↑質問 流石に、class作りすぎ？(header__○○) */
+
+/* 質問 画像のマイナス余白の大きさってどこでわかるのだろう */
+.copy-container {
+  width: 100%;
+  height: 732px;
+  /* height: 732px; */
+  /* width: 1882px; */
+  /* margin: 0 auto; */
+  background-image: url(../img/backgroundimg.png);
+  background-size: cover;
+  padding: 0 240px;
+}
+.copy-container__top-wrapper{
+  float: left;
+}
+/* 質問 h1 p はクラス名付けた方が良いのかな？ */
+.copy-container h1{
+  font-weight: bold;
+  font-size: 63px;
+  line-height: 140%;
+  display: block;
+  margin-top: 194px;
+}
+.copy-container p {
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  margin: 32px 0 57.17px;
+  display: block;
+}
+.appstore-icon-img {
+  width: 182.25px;
+  height: 54px;
+}
+.google-play-icon {
+  margin-right: 25.93px;
+}
+/* 質問 左側と右側のコンテンツの間はどこで指定するのが良いか */
+
+/* 右の大きな画像 */
+/* 質問 figmaで画像の横の余白 */
+.copy-container__img {
+  float: right;
+  margin-top: 109px;
+  /* margin: 109px 0px 100px 78px; */
+}
+.container__text {
+  width: 960px;
+  height: 132px;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  margin: 40px auto 0 auto;
+  text-align: center;
+}
+
+/* 利用者の声 */
+.user-impressions {
+  background: #D2DAF7;
+  height: 588px;
+}
+.user-impressions__title {
+  font-size: 40px;
+  line-height: 64px;
+  font-weight: bold;
+  text-align: center;
+}
+.user-impression-wrapper {
+  padding: 0 180px;
+  /* 質問 240pxにすると改行されてしまう。 後で修正 */
+}
+.user-impression {
+  background-color: #FFFFFF;
+  width: 450px;
+  height: 290px;
+  float: left;
+  margin-top: 58px;
+  margin-right: 20px;
+  /* 質問 60pxにすると改行されてしまう。後で修正 */
+  border-radius: 12px;
+}
+.user-impression img {
+  /* 画像ってどれダウンロードすれば良いのだろう */
+  /* width: 80px;
+  height: 74px; */
+  /* 基本画像はサイズ指定無しかな？(ダウンロードしたものをそのまま使う？) */
+  float: left;
+  margin: 27px 10px 22px 21px;
+  border-radius: 40px;
+}
+/* 写真とタイトルとの余白が2つのコンテンツで違う？ */
+.user-impression__subject {
+  display: block;
+  /* width: 251px; */ 
+  height: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 39px 0px 5px 10px;
+  /* margin-top: 39px; */
+  font-family: Manrope;
+  font-weight: bold;
+  float: left;
+}
+.user-impression__target {
+  display: block;
+  float: left;
+  margin: 5px 0 31px 10px;
+}
+.user-impression__text {
+  font-family: Manrope;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  clear: left;
+  margin: 22px 24px 32px 24px;
+}
+
+/* よくある質問 */
+.questions {
+  height: 752px;
+  background-color: white;
+}
+
+.questions h1{
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+  line-height: 64px;
+  margin-bottom: 56px;
+  /* 質問 何故かh1なのにmarginが効いてくれる */
+}
+
+/* アコーディオンボックス */
+.acbox{
+  /* width: auto; */
+  width: 960px;
+  height: 72px;
+  font-size:0px; /* ラベルと開く部分を分離する時は数値を入れる */
+  /* margin:0 10px; ボックス全体の位置調整 */
+  margin: 32px auto 0 auto;
+}
+.acbox input:checked ~ .acbox {
+  content:"▲"; /* ラベルをクリックした後のアイコン */
+}
+.acbox input{
+  display: none;
+}
+.acbox label{
+  /* width: auto; */
+  padding: 24px 0 24px 40px;
+  /* 質問 padding 584px 設定すると一部折りたたみになる。右側はpaddingいらない？ */
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  border: 1px solid #CCCCCC;
+  box-sizing: border-box;
+  border-radius: 8px;  
+  position: relative; /* 押下時に下に被らないように表示する */
+  display: block;  /* 押下時に下に被らないように表示する */
+  cursor: pointer;
+}
+.acbox label:hover{
+  background: #8BC34A; /* ラベルにマウスを乗せた時の背景色 */
+}
+.acbox label:after{
+  color: #CCCCCC;
+  content:"▼"; /* ラベルのアイコン */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -14px;
+}
+.acbox input:checked ~ label::after {
+  content:"▲"; /* ラベルをクリックした後のアイコン */
+}
+.acbox input:checked ~ label {
+  background: #8BC34A; /* クリック後のラベルの背景色 */
+}
+
+/* 押下時に表示されるコンテンツ内容 */
+.acbox-under{
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.15s; /* 開閉スピードの設定 */
+  font-size: 15px; /* 開いた部分の文字サイズ */
+  color: #555555; /* 開いた部分の文字色 */
+}
+.acbox input:checked ~ .acbox-under{
+  height: auto;
+  padding: 18px; /* 開いた部分の枠内の余白 */
+  border-radius: 0px;
+  background: #F3F4F5; /* 開いた部分の背景色 */
+  opacity: 1;
+  margin-bottom: 32px;
+}
+
+.footer {
+  height: 244px;
+  background-color: #000000;
+  color:white;
+  text-align: center;
+}
+.footer__logo-img {
+  margin-top: 40px;
+}
+
+.footer__nav {
+  display: block;
+  width: 600px;
+  margin: 32px auto 40px auto;
+  /* 質問 ここの中央寄せがわからない */
+}
+.footer__nav li {
+  float: left;
+  margin: 0 20px;
+}
+
+.footer__copyright {
+  display: block;
+  clear: left;
+  padding-top: 40px;
+  /* margin-top: 40px;  上手くいかない*/
+}
